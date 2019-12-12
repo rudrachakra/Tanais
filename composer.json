@@ -1,0 +1,12 @@
+{
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {   
+      "Classes\\": "src/Classes"
+    }
+  }
+}
