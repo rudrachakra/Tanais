@@ -1,16 +1,13 @@
 <?php
 
-use Classes\CommentsList;
-use Classes\Request;
-
 require 'vendor/autoload.php';
 
+use Classes\Builder;
+
 define("PER_PAGE", 5); //количество комментариев не страницу
+define("XML_PATH", realpath("XML/comments.xml"));
 
-$comments = new CommentsList(
-  simplexml_load_file(realpath("XML/comments.xml"))
-);
+$builder = new Builder();
 
-print_r(
-  $comments->getCurrentComments(2)
-);
+
+
