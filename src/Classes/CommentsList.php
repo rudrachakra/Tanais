@@ -5,12 +5,10 @@ namespace Classes;
 class CommentsList
 {
   public $comments;
-  public $XMLpath;
   
   public function __construct()
   {
     $this->comments = $this->getXML();
-    $this->XMLpath = realpath("XML/comments.xml");
   }
 
   public function getCurrentComments(int $page_num): array
